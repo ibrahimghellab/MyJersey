@@ -1,4 +1,4 @@
-# Penopt link 
+# Figma link 
 
 [Click here !](https://www.figma.com/design/yAnqd1DCKkFsTwZ1v0i9th/MyJersey?node-id=0-1&t=8bv4ZFsRgMHgwhFH-1)
 
