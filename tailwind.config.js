@@ -6,7 +6,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        '12/13': '97%',
+      }
+    },
   },
   plugins: [daisyui],
 }
