@@ -1,9 +1,10 @@
 
 import './App.css'
-
+import Jersey from './components/Jersey'
 function App() {
   return (
     <>
+    <Jersey></Jersey>
     <h1>App</h1>
     </>
   )
