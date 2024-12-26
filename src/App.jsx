@@ -1,5 +1,4 @@
 
-import './App.css'
 import Jersey from './components/Jersey'
 function App() {
   return (
