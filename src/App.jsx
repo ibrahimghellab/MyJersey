@@ -1,9 +1,9 @@
 
-import Jersey from './components/Jersey'
+import Product from './components/Product'
 function App() {
   return (
     <>
-    <Jersey></Jersey>
+    <Product></Product>
     <h1>App</h1>
     </>
   )

@@ -1,4 +1,4 @@
-export default function Jersey() {
+export default function Product() {
   return (
     <>
         <img src="" alt=""/>
