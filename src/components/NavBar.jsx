@@ -4,10 +4,10 @@ export default function NavBar() {
         <nav className="navbar bg-black rounded-full m-auto mt-6 w-12/13 place-content-center h-16 ">
             <div className="flex-1 navbar-start">
                 <a className="px-2" href=""><img className="w-16 h-16" src="src/public/MyJersey_logo.png" alt="" /></a>
-                <a className="px-2 text-xl" href="">Home</a>
-                <a className="px-2 text-xl" href="">Collections</a>
-                <a className="px-2 text-xl" href="">About us</a>
-                <a className="px-2 text-xl" href="">Contact</a>
+                <a className="px-2 text-m" href="">Home</a>
+                <a className="px-2 text-m" href="">Collections</a>
+                <a className="px-2 text-m" href="">About us</a>
+                <a className="px-2 text-m" href="">Contact</a>
             </div>
             <div className="navbar-end">
                 <div className="px-2 ">
