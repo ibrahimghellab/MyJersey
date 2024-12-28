@@ -1,7 +1,7 @@
 export default function NavBar() {
   return (
     <>
-      <nav className="navbar bg-black rounded-full m-auto mt-6 w-12/13 place-content-center h-16 ">
+      <nav className="navbar bg-black rounded-full left-1/2  transform -translate-x-1/2   mt-6 w-12/13 place-content-center h-16 fixed ">
         <div className="flex-1 navbar-start">
           <a className="px-2" href="">
             <img
