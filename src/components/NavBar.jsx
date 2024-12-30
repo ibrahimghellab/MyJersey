@@ -1,27 +1,77 @@
+import { useState } from "react";
+import "./NavBar.css";
 export default function NavBar() {
+  const [currentPosition, setCurrentPosition] = useState("home");
+
   return (
     <>
       <nav className="navbar bg-black rounded-full left-1/2  transform -translate-x-1/2   mt-6 w-12/13 place-content-center h-16 fixed ">
         <div className="flex-1 navbar-start">
-          <a className="px-2" href="">
+          <p
+            onClick={() => {
+              setCurrentPosition("home");
+            }}
+            className="px-2 cursor-pointer"
+            href=" "
+          >
             <img
               className="w-16 h-16"
               src="src/public/MyJersey_logo.png"
               alt=""
             />
-          </a>
-          <a className="px-2 text-m" href="">
+          </p>
+          <p
+            onClick={() => {
+              setCurrentPosition("home");
+            }}
+            className={
+              currentPosition === "home"
+                ? "active px-2 text-m cursor-pointer"
+                : " px-2 text-m cursor-pointer"
+            }
+            href=""
+          >
             Home
-          </a>
-          <a className="px-2 text-m" href="">
+          </p>
+          <p
+            onClick={() => {
+              setCurrentPosition("collections");
+            }}
+            className={
+              currentPosition === "collections"
+                ? "active px-2 text-m cursor-pointer"
+                : " px-2 text-m cursor-pointer"
+            }
+            href=""
+          >
             Collections
-          </a>
-          <a className="px-2 text-m" href="">
+          </p>
+          <p
+            onClick={() => {
+              setCurrentPosition("aboutus");
+            }}
+            className={
+              currentPosition === "aboutus"
+                ? "active px-2 text-m cursor-pointer"
+                : " px-2 text-m cursor-pointer"
+            }
+            href=""
+          >
             About us
-          </a>
-          <a className="px-2 text-m" href="">
+          </p>
+          <p
+            onClick={() => {
+              setCurrentPosition("contact");
+            }}
+            className={
+              currentPosition === "contact"
+                ? "active px-2 text-m cursor-pointer"
+                : " px-2 text-m cursor-pointer"
+            }
+            href=""
+          >
             Contact
-          </a>
+          </p>
         </div>
         <div className="navbar-end">
           <div className="px-2 ">
