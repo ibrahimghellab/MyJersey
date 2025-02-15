@@ -1,5 +1,5 @@
-import FormContactUs from "./FormContactUs";
-import NavBar from "./NavBar";
+import FormContactUs from "../../components/FormContactUs";
+import NavBar from "../../components/NavBar";
 
 export default function ContactUs() {
   return (

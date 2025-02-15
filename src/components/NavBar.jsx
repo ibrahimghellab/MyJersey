@@ -81,7 +81,7 @@ export default function NavBar() {
                 src="src/public/search.png"
                 alt=""
               />
-              <input type="text" placeholder="Search..." />
+              <input type="text" placeholder="Search..." readOnly="true" />
             </label>
           </div>
 

@@ -1,8 +1,9 @@
-import ContactUs from "./components/ContactUs";
+import CollectionsPage from "./pages/CollectionsPage/CollectionsPage";
+
 function App() {
   return (
     <>
-      <ContactUs></ContactUs>
+      <CollectionsPage></CollectionsPage>
     </>
   );
 }
