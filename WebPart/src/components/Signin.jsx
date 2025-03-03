@@ -24,7 +24,7 @@ const Signin = () => {
         <input
           className="input input-bordered mb-2 w-96"
           type="password"
-          placeholder="Password"
+          placeholder="Mot de passe"
         />
         <button
           className="btn btn-primary w-96"
