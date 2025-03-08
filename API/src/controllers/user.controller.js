@@ -14,6 +14,18 @@ exports.getAllUsers = async (req, res) => {
     }
 };
 
+exports.getUserById = async(req,res) =>{
+    try {
+        const id = parseInt(req.params.id)
+        const user = await prisma.user.findUnique({
+            where : { id_user : id},
+        });
+        res.json(user);
+    } catch (error) {
+        res.status(500).json({ error: "Erreur serveur" });
+    }
+}
+
 
 exports.createUser = async (req, res) => {
     try {
