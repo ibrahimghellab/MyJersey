@@ -10,7 +10,7 @@ exports.getAllUsers = async (req, res) => {
         const users = await prisma.user.findMany();
         res.json(users);
     } catch (error) {
-        res.status(500).json({ error: "Erreur serveur" });
+        res.status(500).json({ error: error });
     }
 };
 
@@ -22,9 +22,24 @@ exports.getUserById = async(req,res) =>{
         });
         res.json(user);
     } catch (error) {
-        res.status(500).json({ error: "Erreur serveur" });
+        res.status(500).json({ error: error });
     }
 }
+
+
+exports.getOrdersByUserId = async(req,res) => {
+    try{
+        const id = parseInt(req.params.id);
+        const orders = await prisma.order.findMany({
+            where : {id_user : id}
+        });
+        res.json(orders);
+    }catch(error){
+        res.status(500).json({ error: error });
+    }
+}
+
+
 
 
 exports.createUser = async (req, res) => {
@@ -62,6 +77,6 @@ exports.createUser = async (req, res) => {
         res.status(201).json({ message: 'Utilisateur créé avec succès', user });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'Erreur serveur' });
+        res.status(500).json({ error: error });
     }
 };
