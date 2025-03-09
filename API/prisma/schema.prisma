@@ -36,7 +36,7 @@ model Product {
   color       String    @db.VarChar(63)
   quantity    Int
   image_url   String    @db.VarChar(255)
-  date_added  Int
+  date_added  DateTime
   orderProduct OrderProduct[]
   cart        Cart[]
   categories  ProductCategory[]
