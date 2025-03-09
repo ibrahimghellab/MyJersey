@@ -7,7 +7,7 @@ exports.getAllCollections = async(req,res) => {
         const collections = await prisma.collection.findMany();
         res.json(collections);
     } catch (error) {
-        res.status(500).json({ error: "Erreur serveur" });
+        res.status(500).json({ error: error });
     }
 }
 
@@ -24,7 +24,7 @@ exports.createCollection = async (req, res) => {
         res.status(201).json({ message: 'Collection créé avec succès', collection });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'Erreur serveur' });
+        res.status(500).json({ error: error });
     }
 };
 
@@ -37,7 +37,7 @@ exports.getCollectionById = async (req,res) => {
         res.json(collection)
     }catch(error){
         console.error(error);
-        res.status(500).json({ error: 'Erreur serveur' });
+        res.status(500).json({ error: error });
     }
     
 
