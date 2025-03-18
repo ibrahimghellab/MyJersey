@@ -1,36 +1,55 @@
-import NavBar from "../../components/NavBar";
+import { useEffect, useState } from "react";
 import Product from "../../components/Product";
 
+
 export default function CollectionsPage() {
+  const [data,setData] = useState([]);
+
+  useEffect(()=>{
+    fetch("http://localhost:5000/collections")
+    .then((response)=>{
+      if(response){
+        return response.json();
+      }else{
+        throw new Error("Erreur lors de la récupération des données");
+      }
+    }).then((data)=>{
+      setData(data);
+    }).catch((error)=>{
+      console.log(error);
+    })
+  },[]);
   return (
     <>
       <h1>
-        ALL <span>COLLECTIONS</span>
+        ALL COLLECTIONS
       </h1>
       <select>
         <option value="">
-          <span>Sort by:</span> Price : Low To High
+          Sort by: Price : Low To High
         </option>
         <option value="">
-          <span>Sort by:</span> Price : High To Low
+          Sort by: Price : High To Low
         </option>
         <option value="">
           {" "}
-          <span>Sort by:</span> Alphabetical : A To Z
+          Sort by: Alphabetical : A To Z
         </option>
         <option value="">
-          <span>Sort by:</span> Alphabetical : Z To A
+          Sort by: Alphabetical : Z To A
         </option>
         <option value="">
-          <span>Sort by:</span> Date: Old To Recent
+          Sort by: Date: Old To Recent
         </option>
         <option value="">
-          <span>Sort by:</span> Date: Recent To Old
+          Sort by: Date: Recent To Old
         </option>
       </select>
-
       <div>
-        <Product></Product>
+        {console.log(data)} 
+        {data.map((collection)=>(
+          <Product key={collection.id_collection} price="50">{collection.name}</Product>
+        ))}
       </div>
     </>
   );
