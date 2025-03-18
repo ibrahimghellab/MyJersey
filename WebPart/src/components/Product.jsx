@@ -1,4 +1,4 @@
-export default function Product() {
+export default function Product({children,price}) {
   return (
     <>
       <div className="card card-bordered w-60 shadow-xl">
@@ -9,8 +9,8 @@ export default function Product() {
           />
         </figure>
 
-        <h2 className="card-title">Title</h2>
-        <p>Price</p>
+        <h2 className="card-title">{children}</h2>
+        <p>{price}</p>
       </div>
     </>
   );
